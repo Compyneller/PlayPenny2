@@ -7,16 +7,13 @@ const Bricks = () => {
     <div className={style.wrapper}>
       <Container style={{ padding: "3rem 0" }}>
         <Row className="g-3">
-          <Col sm={12} lg={6}>
-            <img src={image} className="w-75" alt="" />
-          </Col>
           <Col
             sm={12}
-            lg={6}
+            lg={12}
             className="d-flex align-items-center justify-content-center"
           >
             <Row className="g-3">
-              <Col sm={12} md={6} lg={6}>
+              <Col sm={12} md={6} lg={4}>
                 <Card className={style.cards}>
                   <Card.Body>
                     <h3>The Top Choice Rummy Website</h3>
@@ -29,7 +26,7 @@ const Bricks = () => {
                   </Card.Body>
                 </Card>
               </Col>
-              <Col sm={12} md={6} lg={6}>
+              <Col sm={12} md={6} lg={4}>
                 <Card className={style.cards}>
                   <Card.Body>
                     <h3>How to Play Rummy on Playpenny?</h3>
@@ -41,7 +38,7 @@ const Bricks = () => {
                   </Card.Body>
                 </Card>
               </Col>
-              <Col sm={12} md={6} lg={6}>
+              <Col sm={12} md={6} lg={4}>
                 <Card className={style.cards}>
                   <Card.Body>
                     <h3>How to Login Playpenny?</h3>
