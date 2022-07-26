@@ -20,7 +20,7 @@ const HeaderComp = () => {
                 alt=""
               />
               <img
-                src="https://img.icons8.com/dotty/344/mac-client.png"
+                src="https://img.icons8.com/sf-ultralight-filled/344/mac-client.png"
                 height={50}
                 width={50}
                 alt=""
