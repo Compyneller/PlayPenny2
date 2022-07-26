@@ -41,15 +41,17 @@ background-size: cover;
 }
 @media screen and (max-width : 800px) {
     .wrapper{
-        background-image: url('../../assets/SL_120319_25700_04 [Converted].png');
-        width: 100%;
-        min-height: 70vh;
-        background-size: cover;
-      
-        background-repeat: no-repeat;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        position: relative;
+        background-image: url('../../assets/wave (3).svg');
+     
+     background-repeat: no-repeat;
+     background-size: cover;
+        
+         width: 100%;
+         min-height: 100vh;
+         display: flex;
+         align-items: center;
+         justify-content: center;
     .content{
         width: 100%;
         display: flex;
@@ -59,13 +61,13 @@ background-size: cover;
         h1{
             font-size: 12vw !important;
             font-family: 'Prata', serif;
-            color: #F5963F;
+            color: white;
 
         }
         h4{
             font-size: 8vw !important;
             font-family: 'Ibarra Real Nova', serif;
-            color: #F5963F;
+            color: white;
         }
         .icons{
             width: 100% !important;

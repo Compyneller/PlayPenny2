@@ -9,7 +9,7 @@ const CardComp = () => {
           <Col sm={12} lg={6} className="d-flex align-items-center ">
             <Row className="g-3">
               <div className="col-6 ">
-                <Card className={style.cus_card}>
+                <Card className={style.cus_card} style={{ height: "100%" }}>
                   <Card.Body style={{ padding: "4rem 0" }}>
                     {" "}
                     Register for FREE
@@ -17,7 +17,7 @@ const CardComp = () => {
                 </Card>
               </div>
               <div className="col-6">
-                <Card className={style.cus_card}>
+                <Card className={style.cus_card} style={{ height: "100%" }}>
                   <Card.Body style={{ padding: "4rem 0" }}>
                     {" "}
                     First time registration bonus
@@ -25,7 +25,7 @@ const CardComp = () => {
                 </Card>
               </div>
               <div className="col-6">
-                <Card className={style.cus_card}>
+                <Card className={style.cus_card} style={{ height: "100%" }}>
                   <Card.Body style={{ padding: "4rem 0" }}>
                     {" "}
                     Free rummy matches
@@ -33,7 +33,7 @@ const CardComp = () => {
                 </Card>
               </div>
               <div className="col-6">
-                <Card className={style.cus_card}>
+                <Card className={style.cus_card} style={{ height: "100%" }}>
                   <Card.Body style={{ padding: "4rem 0" }}>
                     {" "}
                     Refer & Earn bonus
