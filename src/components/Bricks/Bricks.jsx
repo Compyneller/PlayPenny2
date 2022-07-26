@@ -6,6 +6,7 @@ const Bricks = () => {
   return (
     <div className={style.wrapper}>
       <Container style={{ padding: "3rem 0" }}>
+        <h1>PLAYPENNY - THE JOY BEGINS</h1>
         <Row className="g-3">
           <Col
             sm={12}
