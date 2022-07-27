@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
 .wrapper{
    position: relative;
-   background-image: url('../../assets/wave (3).svg');
+   background-image: url('../../assets/1_wirf_10 [Converted1].png');
 
 background-repeat: no-repeat;
 background-size: cover;
@@ -20,19 +21,27 @@ background-size: cover;
         justify-content: center;
         h1{
             font-size: 5vw;
-            font-family: 'Prata', serif;
-            color: #ffff;
+            font-family: 'Oswald', sans-serif;
+            background: #6F3FEB;
+background: linear-gradient(to top, #6F3FEB 0%, #7AFFFE 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+            font-weight: 700;
+            
 
         }
         h4{
             font-size: 2.5vw;
-            font-family: 'Ibarra Real Nova', serif;
-            color: #ffff;
+            font-family: 'Oswald', sans-serif;
+            background: #6F3FEB;
+            background: linear-gradient(to top, #6F3FEB 0%, #7AFFFE 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         .icons{
             width: 50%;
          
-            filter: invert(1);
+            // filter: invert(1);
             display: flex;
             align-items: center;
             justify-content: space-between;

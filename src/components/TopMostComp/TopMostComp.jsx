@@ -1,11 +1,11 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import style from "../TopMostComp/TopMostComp.module.scss";
-import image from "../../assets/6037679.png";
+import image from "../../assets/6037719.jpg";
 const TopMostComp = () => {
   return (
     <div className={style.wrapper}>
-      <Container style={{ padding: "3rem 0" }}>
+      <Container style={{ padding: "3rem 1rem" }}>
         <Row className="g-3">
           <Col sm={12} lg={6}>
             <img

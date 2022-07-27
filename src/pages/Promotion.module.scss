@@ -1,0 +1,23 @@
+.wrapper{
+    h1{
+        font-size: 2vw;
+        font-weight: 700;
+    }
+    h5{
+        font-size: 1.2vw;
+        font-weight: 500;
+
+    }
+}
+@media screen and (max-width : 900px) {
+    .wrapper{
+        h1{
+            font-size: 8vw !important;
+        }
+        h5{
+            font-size: 5vw !important;
+
+        }
+    }
+    
+}

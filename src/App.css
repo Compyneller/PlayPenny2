@@ -16,3 +16,11 @@ img {
   /* Safari seems to support, but seems deprecated and does the same thing as the others. */
   image-rendering: -webkit-optimize-contrast;
 }
+
+.navbarContainer{
+  background: transparent;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}

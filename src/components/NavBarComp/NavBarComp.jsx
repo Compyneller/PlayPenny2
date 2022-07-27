@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
-const NavBarComp = () => {
+const NavBarComp = ({ bg }) => {
   return (
     <>
       {["sm"].map((expand) => (
@@ -12,7 +12,7 @@ const NavBarComp = () => {
           expand={expand}
           variant="dark"
           style={{
-            background: "#0D1043",
+            background: `${bg}`,
             position: "sticky",
             top: "0",
             zIndex: "100",
@@ -33,8 +33,8 @@ const NavBarComp = () => {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="#action1">Home</Nav.Link>
-                  <Nav.Link href="#action2">Promotions</Nav.Link>
+                  <Nav.Link href="/">Home</Nav.Link>
+                  <Nav.Link href="/promotion">Promotions</Nav.Link>
                   <Nav.Link href="#action2">Downloads</Nav.Link>
                   <Nav.Link href="#action2">Leaderboard</Nav.Link>
                 </Nav>

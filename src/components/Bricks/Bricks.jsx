@@ -5,7 +5,7 @@ import image from "../../assets/oie_4tNTL3mqdrDq.png";
 const Bricks = () => {
   return (
     <div className={style.wrapper}>
-      <Container style={{ padding: "3rem 0" }}>
+      <Container style={{ padding: "3rem 1rem" }}>
         <h1>PLAYPENNY - THE JOY BEGINS</h1>
         <Row className="g-3">
           <Col
