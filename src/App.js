@@ -5,7 +5,8 @@ import NavBarComp from "./components/NavBarComp/NavBarComp";
 import Footer from "./components/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Promotion from "./pages/Promotion";
-import { useState } from "react";
+import Leaderboard from "./pages/Leaderboard";
+import Login from "./pages/Login/Login";
 function App() {
   return (
     <div className="App">
@@ -13,10 +14,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/promotion" element={<Promotion />} />
+          <Route path="/leaderboard" element={<Leaderboard />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </BrowserRouter>
-
-      <Footer />
     </div>
   );
 }

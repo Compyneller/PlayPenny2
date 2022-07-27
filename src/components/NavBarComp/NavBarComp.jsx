@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -32,11 +33,14 @@ const NavBarComp = ({ bg }) => {
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
-                <Nav className="justify-content-end flex-grow-1 pe-3">
+                <Nav className="justify-content-end flex-grow-1 align-items-center pe-3">
                   <Nav.Link href="/">Home</Nav.Link>
                   <Nav.Link href="/promotion">Promotions</Nav.Link>
-                  <Nav.Link href="#action2">Downloads</Nav.Link>
-                  <Nav.Link href="#action2">Leaderboard</Nav.Link>
+                  <Nav.Link href="/download">Downloads</Nav.Link>
+                  <Nav.Link href="/leaderboard">Leaderboard</Nav.Link>
+                  <Nav.Link href="/login">
+                    <Button variant="outline-light">Login</Button>
+                  </Nav.Link>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>

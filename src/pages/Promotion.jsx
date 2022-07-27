@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../components/Footer";
 import NavBarComp from "../components/NavBarComp/NavBarComp";
 import BottomCard from "../components/PromotionsComp/BottomsCard/BottomCard";
 import Daily from "../components/PromotionsComp/Daily/Daily";
@@ -26,6 +27,7 @@ const Promotion = () => {
       <BottomCard />
       <NoDownloads />
       <Daily />
+      <Footer />
     </div>
   );
 };
