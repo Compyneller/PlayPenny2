@@ -14,8 +14,7 @@ const NavBarComp = ({ bg }) => {
           variant="dark"
           style={{
             background: `${bg}`,
-            position: "sticky",
-            top: "0",
+
             zIndex: "100",
           }}
         >
@@ -35,6 +34,7 @@ const NavBarComp = ({ bg }) => {
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 align-items-center pe-3">
                   <Nav.Link href="/">Home</Nav.Link>
+                  <Nav.Link href="/aboutus">About Us</Nav.Link>
                   <Nav.Link href="/promotion">Promotions</Nav.Link>
                   <Nav.Link href="/download">Downloads</Nav.Link>
                   <Nav.Link href="/leaderboard">Leaderboard</Nav.Link>
