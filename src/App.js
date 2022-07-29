@@ -9,6 +9,8 @@ import Leaderboard from "./pages/Leaderboard";
 import Login from "./pages/Login/Login";
 import AboutUs from "./pages/AboutUs/AboutUs";
 import HowToPlay from "./pages/HowToPlay/HowToPlay";
+import Privacy from "./pages/Privacy/Privacy";
+import Disclaimer from "./pages/Disclaimer/Disclaimer";
 function App() {
   return (
     <div className="App">
@@ -20,6 +22,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/how-to-play" element={<HowToPlay />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/disclaimer" element={<Disclaimer />} />
         </Routes>
       </BrowserRouter>
     </div>

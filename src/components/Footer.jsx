@@ -1,20 +1,32 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <div style={{ width: "100%", background: "#0D1043", padding: "3rem 0" }}>
       <Container className="text-center text-light">
         <Row className="g-3">
-          <div className="col-6 col-lg-4">
-            <h5>WORLD CLASS SECURITY</h5>
-            <li>Comodo SSL Secured</li>
-            <li>Stringent Fair Play safeguards</li>
-            <li>3rd party audited / verified RNG</li>
+          <div className="col-6 col-lg-4 privacyLink ">
+            <Link onClick={() => window.scroll(0, 0)} to="/privacy">
+              Privacy Policy
+            </Link>
+            <Link onClick={() => window.scroll(0, 0)} to="/tc">
+              Terms & Conditions
+            </Link>
+            <Link onClick={() => window.scroll(0, 0)} to="/legal">
+              Legal
+            </Link>
+            <Link onClick={() => window.scroll(0, 0)} to="/disclaimer">
+              Disclaimer
+            </Link>
           </div>
 
           <div className="col-6 col-lg-4">
-            <h5>PLAYPENNY</h5>
+            <h5>CONTACT US</h5>
+            <a href="mailto:support@playpenny.in" style={{ color: "#ffff" }}>
+              support@playpenny.in
+            </a>
           </div>
           <div className="col-6 col-lg-4">
             <h5>FOLLOW US</h5>

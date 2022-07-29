@@ -24,3 +24,13 @@ img {
   z-index: 100;
   width: 100%;
 }
+.privacyLink{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.privacyLink a{
+  color: #ffff;
+  text-decoration: none;
+}

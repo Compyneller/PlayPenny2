@@ -19,7 +19,7 @@ const NavBarComp = ({ bg }) => {
           }}
         >
           <Container>
-            <Navbar.Brand href="#">PlayPenny</Navbar.Brand>
+            <Navbar.Brand href="/">PlayPenny</Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
