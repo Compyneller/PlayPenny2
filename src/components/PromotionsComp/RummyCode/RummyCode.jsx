@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 
 const RummyCode = () => {
   return (
-    <Container>
+    <Container className="text-light">
       <h3>Rummy Bonus Code</h3>
       <p>
         PlayPenny is a dream destination for players looking for a generous

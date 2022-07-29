@@ -1,11 +1,11 @@
 import React from "react";
-import image from "../../../assets/weekly-leaderboard.gif";
+import image from "../../../assets/Flame_Teamwork_transparent_by_Icons8.gif";
 
 const PromHeader = () => {
   return (
-    <div className="container" style={{ padding: "3rem 1rem" }}>
+    <>
       <img src={image} className="w-100" alt="" />
-    </div>
+    </>
   );
 };
 

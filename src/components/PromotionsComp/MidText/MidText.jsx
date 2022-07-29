@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 
 const MidText = () => {
   return (
-    <Container style={{ padding: "3rem 1rem" }}>
+    <Container className="text-light" style={{ padding: "3rem 1rem" }}>
       <h3>Rummy Promotions - Best offers online</h3>
       <p>
         Every month PlayPenny hostsexclusive tournaments and promotions. If

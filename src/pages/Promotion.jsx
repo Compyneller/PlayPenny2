@@ -15,8 +15,8 @@ import style from "./Promotion.module.scss";
 const Promotion = () => {
   return (
     <div className={style.wrapper}>
-      <NavBarComp bg="#0D1043" />
-      <PromHeader />
+      <NavBarComp />
+
       <HotDeals />
       <Other />
       <MidText />

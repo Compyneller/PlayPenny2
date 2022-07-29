@@ -36,7 +36,7 @@ const NavBarComp = ({ bg }) => {
                   <Nav.Link href="/">Home</Nav.Link>
                   <Nav.Link href="/aboutus">About Us</Nav.Link>
                   <Nav.Link href="/promotion">Promotions</Nav.Link>
-                  <Nav.Link href="/download">Downloads</Nav.Link>
+                  <Nav.Link href="/how-to-play">How to Play</Nav.Link>
                   <Nav.Link href="/leaderboard">Leaderboard</Nav.Link>
                   <Nav.Link href="/login">
                     <Button variant="outline-light">Login</Button>
