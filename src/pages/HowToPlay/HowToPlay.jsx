@@ -35,32 +35,36 @@ const HowToPlay = () => {
           </Col>
         </Row>
         <Row className="g-3">
-          <Col sm={6} lg={3}>
+          <Col xs={6} sm={6} lg={3}>
             <Button
+              className="w-100"
               variant={toggleBtn === "rb" ? "light" : "outline-light"}
               onClick={() => setToggleBtn("rb")}
             >
               RUMMY BASICS
             </Button>
           </Col>
-          <Col sm={6} lg={3}>
+          <Col xs={6} sm={6} lg={3}>
             <Button
+              className="w-100"
               variant={toggleBtn === "pr" ? "light" : "outline-light"}
               onClick={() => setToggleBtn("pr")}
             >
               POINTS RUMMY
             </Button>
           </Col>
-          <Col sm={6} lg={3}>
+          <Col xs={6} sm={6} lg={3}>
             <Button
+              className="w-100"
               variant={toggleBtn === "dr" ? "light" : "outline-light"}
               onClick={() => setToggleBtn("dr")}
             >
               DEALS RUMMY
             </Button>
           </Col>
-          <Col sm={6} lg={3}>
+          <Col xs={6} sm={6} lg={3}>
             <Button
+              className="w-100"
               variant={toggleBtn === "pool" ? "light" : "outline-light"}
               onClick={() => setToggleBtn("pool")}
             >
