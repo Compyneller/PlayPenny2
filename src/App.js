@@ -11,6 +11,10 @@ import AboutUs from "./pages/AboutUs/AboutUs";
 import HowToPlay from "./pages/HowToPlay/HowToPlay";
 import Privacy from "./pages/Privacy/Privacy";
 import Disclaimer from "./pages/Disclaimer/Disclaimer";
+import RummyRules from "./pages/RummyRules/RummyRules";
+import RummyTips from "./pages/RummyTips/RummyTips";
+import Leagal from "./pages/Leagal/Leagal";
+import Faq from "./pages/Faq/Faq";
 function App() {
   return (
     <div className="App">
@@ -24,6 +28,10 @@ function App() {
           <Route path="/how-to-play" element={<HowToPlay />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/disclaimer" element={<Disclaimer />} />
+          <Route path="/rummy-rules" element={<RummyRules />} />
+          <Route path="/rummy-tips" element={<RummyTips />} />
+          <Route path="/rummy-legal" element={<Leagal />} />
+          <Route path="/rummy-faq" element={<Faq />} />
         </Routes>
       </BrowserRouter>
     </div>
