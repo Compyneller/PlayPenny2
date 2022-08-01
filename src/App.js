@@ -15,6 +15,7 @@ import RummyRules from "./pages/RummyRules/RummyRules";
 import RummyTips from "./pages/RummyTips/RummyTips";
 import Leagal from "./pages/Leagal/Leagal";
 import Faq from "./pages/Faq/Faq";
+import TC from "./pages/TermCondition/TC";
 function App() {
   return (
     <div className="App">
@@ -32,6 +33,7 @@ function App() {
           <Route path="/rummy-tips" element={<RummyTips />} />
           <Route path="/rummy-legal" element={<Leagal />} />
           <Route path="/rummy-faq" element={<Faq />} />
+          <Route path="/tc" element={<TC />} />
         </Routes>
       </BrowserRouter>
     </div>
