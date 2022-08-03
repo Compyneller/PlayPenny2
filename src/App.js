@@ -16,6 +16,9 @@ import RummyTips from "./pages/RummyTips/RummyTips";
 import Leagal from "./pages/Leagal/Leagal";
 import Faq from "./pages/Faq/Faq";
 import TC from "./pages/TermCondition/TC";
+import ProtectedPage from "./pages/ProtectedPage/ProtectedPage";
+import AccountOverView from "./components/AccountOverView/AccountOverView";
+import AddCash from "./components/AddCash/AddCash";
 function App() {
   return (
     <div className="App">
@@ -34,6 +37,10 @@ function App() {
           <Route path="/rummy-legal" element={<Leagal />} />
           <Route path="/rummy-faq" element={<Faq />} />
           <Route path="/tc" element={<TC />} />
+          <Route path="protect" element={<ProtectedPage />}>
+            <Route path="account-overview" element={<AccountOverView />} />
+            <Route path="add-cash" element={<AddCash />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </div>

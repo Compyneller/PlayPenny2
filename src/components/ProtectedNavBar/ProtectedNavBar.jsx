@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
-const NavBarComp = ({ bg }) => {
+const ProtectedNavBar = ({ bg }) => {
   return (
     <>
       {["sm"].map((expand) => (
@@ -33,14 +33,14 @@ const NavBarComp = ({ bg }) => {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 align-items-center pe-3">
-                  <Nav.Link href="/">Home</Nav.Link>
-                  <Nav.Link href="/aboutus">About Us</Nav.Link>
-                  <Nav.Link href="/promotion">Promotions</Nav.Link>
-                  <Nav.Link href="/how-to-play">How to Play</Nav.Link>
-                  <Nav.Link href="/leaderboard">Leaderboard</Nav.Link>
-                  <Nav.Link href="protect/account-overview">Add Cash</Nav.Link>
+                  <Nav.Link href="/">Lobby</Nav.Link>
+                  <Nav.Link href="/promotion">My Account</Nav.Link>
+                  <Nav.Link href="/how-to-play">Bring a friend</Nav.Link>
+                  <Nav.Link href="/leaderboard">Leader board</Nav.Link>
+                  <Nav.Link href="/leaderboard">PlayPenny Rewards</Nav.Link>
+                  <Nav.Link href="/leaderboard">Promotions Rewards</Nav.Link>
                   <Nav.Link href="/login">
-                    <Button variant="outline-light">Login</Button>
+                    <Button variant="outline-light">Logout</Button>
                   </Nav.Link>
                 </Nav>
               </Offcanvas.Body>
@@ -52,4 +52,4 @@ const NavBarComp = ({ bg }) => {
   );
 };
 
-export default NavBarComp;
+export default ProtectedNavBar;
