@@ -20,44 +20,23 @@ const MyAccountSide = () => {
         </Link>
       </div>
       <div className="col-3 col-lg-12">
-        <Link to="/account-overview">
+        <Link to="withdraw-cash">
           <Card>
             <Card.Body>Withdraw Cash</Card.Body>
           </Card>
         </Link>
       </div>
       <div className="col-3 col-lg-12">
-        <Link to="/account-overview">
+        <Link to="personal-detail">
           <Card>
             <Card.Body>Profile</Card.Body>
           </Card>
         </Link>
       </div>
       <div className="col-3 col-lg-12">
-        <Link to="/account-overview">
+        <Link to="transactions">
           <Card>
             <Card.Body>View Transactions</Card.Body>
-          </Card>
-        </Link>
-      </div>
-      <div className="col-3 col-lg-12">
-        <Link to="/account-overview">
-          <Card>
-            <Card.Body>Preferences</Card.Body>
-          </Card>
-        </Link>
-      </div>
-      <div className="col-3 col-lg-12">
-        <Link to="/account-overview">
-          <Card>
-            <Card.Body>Loyalty Points</Card.Body>
-          </Card>
-        </Link>
-      </div>
-      <div className="col-3 col-lg-12">
-        <Link to="/account-overview">
-          <Card>
-            <Card.Body>Bonus Points</Card.Body>
           </Card>
         </Link>
       </div>

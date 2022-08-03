@@ -8,7 +8,7 @@ const AccountOverView = () => {
       <Card.Header as="h3">MY ACCOUNT</Card.Header>
       <Card.Body>
         <Row className="g-3">
-          <Col sm={12} lg={6}>
+          <Col sm={12} lg={12}>
             <Card style={{ height: " 100%" }}>
               <Card.Header as="h5">Cash Account</Card.Header>
               <Card.Body>
@@ -29,7 +29,7 @@ const AccountOverView = () => {
               </Card.Body>
             </Card>
           </Col>
-          <Col sm={12} lg={6}>
+          <Col sm={12} lg={12}>
             <Card style={{ height: " 100%" }}>
               <Card.Header as="h5">Bonus</Card.Header>
               <Card.Body>
@@ -44,7 +44,7 @@ const AccountOverView = () => {
               </Card.Body>
             </Card>
           </Col>
-          <Col sm={12} lg={6}>
+          <Col sm={12} lg={12}>
             <Card style={{ height: " 100%" }}>
               <Card.Header as="h5">Loyalty Points</Card.Header>
               <Card.Body>
@@ -59,7 +59,7 @@ const AccountOverView = () => {
               </Card.Body>
             </Card>
           </Col>
-          <Col sm={12} lg={6}>
+          <Col sm={12} lg={12}>
             <Card style={{ height: " 100%" }}>
               <Card.Header as="h5">Practice Account</Card.Header>
               <Card.Body>
@@ -70,7 +70,7 @@ const AccountOverView = () => {
               </Card.Body>
             </Card>
           </Col>
-          <Col sm={12} lg={6}>
+          <Col sm={12} lg={12}>
             <Card style={{ height: " 100%" }}>
               <Card.Header as="h5">Deposit Limit</Card.Header>
               <Card.Body>

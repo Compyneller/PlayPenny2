@@ -19,6 +19,9 @@ import TC from "./pages/TermCondition/TC";
 import ProtectedPage from "./pages/ProtectedPage/ProtectedPage";
 import AccountOverView from "./components/AccountOverView/AccountOverView";
 import AddCash from "./components/AddCash/AddCash";
+import WithdrawCash from "./components/WithdrawCash/WithdrawCash";
+import PersonalDetails from "./components/PersonalDetails/PersonalDetails";
+import Transactions from "./components/Transactions/Transactions";
 function App() {
   return (
     <div className="App">
@@ -40,6 +43,9 @@ function App() {
           <Route path="protect" element={<ProtectedPage />}>
             <Route path="account-overview" element={<AccountOverView />} />
             <Route path="add-cash" element={<AddCash />} />
+            <Route path="withdraw-cash" element={<WithdrawCash />} />
+            <Route path="personal-detail" element={<PersonalDetails />} />
+            <Route path="transactions" element={<Transactions />} />
           </Route>
         </Routes>
       </BrowserRouter>

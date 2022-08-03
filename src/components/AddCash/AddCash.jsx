@@ -8,7 +8,7 @@ const AddCash = () => {
       <Card.Body>
         <form action="">
           <div className="row g-2">
-            <div className="col-1">
+            <div className="col-2">
               <Card>
                 <Card.Body>
                   <img
@@ -19,7 +19,7 @@ const AddCash = () => {
                 </Card.Body>
               </Card>
             </div>
-            <div className="col-11">
+            <div className="col-10">
               <InputGroup className="mb-3" style={{ height: "100%" }}>
                 <Form.Control
                   placeholder="1000"

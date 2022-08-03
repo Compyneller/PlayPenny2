@@ -1,5 +1,6 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
+import Ad from "../../components/Ad/Ad";
 import MyAccountComp from "../../components/MyAccountComp/MyAccountComp";
 import ProtectedNavBar from "../../components/ProtectedNavBar/ProtectedNavBar";
 import style from "./ProtectedPage.module.scss";
@@ -8,7 +9,31 @@ const ProtectedPage = () => {
     <div className={style.wrapper}>
       <ProtectedNavBar />
       <Container className={style.container}>
-        <MyAccountComp />
+        <Row className="g-3">
+          <Col sm={12} lg={2}>
+            <Row className="g-3">
+              <Col sm={6} lg={12}>
+                <Ad />
+              </Col>
+              <Col sm={6} lg={12}>
+                <Ad />
+              </Col>
+            </Row>
+          </Col>
+          <Col sm={12} lg={8}>
+            <MyAccountComp />
+          </Col>
+          <Col sm={12} lg={2}>
+            <Row className="g-3">
+              <Col sm={6} lg={12}>
+                <Ad />
+              </Col>
+              <Col sm={6} lg={12}>
+                <Ad />
+              </Col>
+            </Row>
+          </Col>
+        </Row>
       </Container>
     </div>
   );
