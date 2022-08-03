@@ -25,7 +25,7 @@ const HeaderComp = () => {
                 width={50}
                 alt=""
               />
-              <img
+              {/* <img
                 src="https://img.icons8.com/nolan/344/google-play.png"
                 height={50}
                 width={50}
@@ -36,7 +36,7 @@ const HeaderComp = () => {
                 height={50}
                 width={50}
                 alt=""
-              />
+              /> */}
             </div>
           </Col>
           <Col sm={12} lg={6}>
