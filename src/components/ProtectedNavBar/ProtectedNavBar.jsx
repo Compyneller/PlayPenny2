@@ -4,7 +4,16 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
+import { useUserAuth } from "../../context/AuthContext";
 const ProtectedNavBar = ({ bg }) => {
+  const { logOut } = useUserAuth();
+  const handleLogout = async () => {
+    try {
+      await logOut();
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <>
       {["sm"].map((expand) => (
@@ -40,7 +49,9 @@ const ProtectedNavBar = ({ bg }) => {
                   <Nav.Link href="/leaderboard">PlayPenny Rewards</Nav.Link>
                   <Nav.Link href="/leaderboard">Promotions Rewards</Nav.Link>
                   <Nav.Link href="/login">
-                    <Button variant="outline-light">Logout</Button>
+                    <Button variant="outline-light" onClick={handleLogout}>
+                      Logout
+                    </Button>
                   </Nav.Link>
                 </Nav>
               </Offcanvas.Body>

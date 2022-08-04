@@ -23,6 +23,7 @@ import WithdrawCash from "./components/WithdrawCash/WithdrawCash";
 import PersonalDetails from "./components/PersonalDetails/PersonalDetails";
 import Transactions from "./components/Transactions/Transactions";
 import SignUp from "./pages/SignUp/SignUp";
+import ProtectedRoute from "./components/ProtectedRoute";
 function App() {
   return (
     <div className="App">
@@ -42,7 +43,15 @@ function App() {
           <Route path="/rummy-legal" element={<Leagal />} />
           <Route path="/rummy-faq" element={<Faq />} />
           <Route path="/tc" element={<TC />} />
-          <Route path="protect" element={<ProtectedPage />}>
+
+          <Route
+            path="protect"
+            element={
+              <ProtectedRoute>
+                <ProtectedPage />
+              </ProtectedRoute>
+            }
+          >
             <Route path="account-overview" element={<AccountOverView />} />
             <Route path="add-cash" element={<AddCash />} />
             <Route path="withdraw-cash" element={<WithdrawCash />} />

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {
+  Alert,
   Button,
   Card,
   Container,
@@ -7,39 +8,37 @@ import {
   InputGroup,
   Row,
 } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../Login/Login.scss";
 import LoginBg from "../Login/LoginBg";
-import axios from "axios";
+import { useUserAuth } from "../../context/AuthContext";
 const SignUp = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [mobileNumber, setMobileNumber] = useState("");
-  const [pass, setPass] = useState("");
+  const [password, setPassword] = useState("");
   const [confirmPass, setConfirmPass] = useState("");
-
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
+  const { signUp } = useUserAuth();
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const body = {
-      firstname: `${firstName}`,
-      lastName: `${lastName}`,
-      email: `${email}`,
-      mobile_no: `${mobileNumber}`,
-      password: `${pass}`,
-    };
-    console.log(body);
-    const response = await axios.post(
-      "http://34.207.41.229:4100/playpenny/signup",
-      body,
-      {
-        headers: {
-          Accept: "application/json, text/plain, */*",
-          "Content-Type": "application/json",
-        },
-      }
-    );
-    console.log(response);
+    if (password !== confirmPass) {
+      return setError("Password do not match");
+    }
+    try {
+      setError("");
+      setLoading(true);
+      await signUp(email, password);
+      navigate("/login");
+    } catch (error) {
+      setError(
+        "Failed to create an account Password must be above 6 character"
+      );
+    }
+    setLoading(false);
   };
   return (
     <div className="login-wrapper">
@@ -59,8 +58,9 @@ const SignUp = () => {
             <Card.Title as="h1">Sign Up</Card.Title>
             <br />
             <Card.Text>
-              <form action="" onSubmit={(e) => handleSubmit(e)}>
-                <Row className="g-2">
+              {error && <Alert variant="danger">{error}</Alert>}
+              <form action="" onSubmit={handleSubmit}>
+                {/* <Row className="g-2">
                   <div className="col-12 col-lg-6">
                     {" "}
                     <label htmlFor="">First Name</label>
@@ -93,7 +93,7 @@ const SignUp = () => {
                       />
                     </InputGroup>
                   </div>
-                </Row>
+                </Row> */}
                 <label htmlFor="">Email</label>
                 <InputGroup className="my-3">
                   <Form.Control
@@ -107,7 +107,7 @@ const SignUp = () => {
                     onChange={(e) => setEmail(e.target.value)}
                   />
                 </InputGroup>
-                <label htmlFor="">Mobile Number</label>
+                {/* <label htmlFor="">Mobile Number</label>
                 <InputGroup className="my-3">
                   <Form.Control
                     placeholder="Enter Mobile Number"
@@ -119,7 +119,7 @@ const SignUp = () => {
                     value={mobileNumber}
                     onChange={(e) => setMobileNumber(e.target.value)}
                   />
-                </InputGroup>
+                </InputGroup> */}
                 <label htmlFor="">Password</label>
                 <InputGroup className="my-3">
                   <Form.Control
@@ -129,8 +129,8 @@ const SignUp = () => {
                     className="text-light"
                     aria-label="Username"
                     aria-describedby="basic-addon1"
-                    value={pass}
-                    onChange={(e) => setPass(e.target.value)}
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                   />
                 </InputGroup>
                 <label htmlFor="">Confirm Password</label>
@@ -238,7 +238,12 @@ const SignUp = () => {
                     </div>
                   </div>
                 </Form.Group> */}
-                <Button variant="primary" type="submit" className="w-100">
+                <Button
+                  disabled={loading}
+                  variant="primary"
+                  type="submit"
+                  className="w-100"
+                >
                   Sign Up
                 </Button>
                 <br />

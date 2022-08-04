@@ -2,31 +2,37 @@ import React, { useState } from "react";
 import "./Login.scss";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import { Container, Form, InputGroup } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Alert, Container, Form, InputGroup } from "react-bootstrap";
+import { Link, useNavigate } from "react-router-dom";
 import LoginBg from "./LoginBg";
 import axios from "axios";
+import { signInWithGoogle } from "../../firebase";
+import { useUserAuth } from "../../context/AuthContext";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const { login, googleSignIn } = useUserAuth();
+  const navigate = useNavigate();
   const handleLogin = async (e) => {
     e.preventDefault();
-    const body = {
-      email,
-      password: pass,
-    };
-    console.log(body);
-    const response = await axios.post(
-      "http://34.207.41.229:4100/playpenny/login",
-      body,
-      {
-        headers: {
-          Accept: "application/json, text/plain, */*",
-          "Content-Type": "application/json",
-        },
-      }
-    );
-    console.log(response);
+    try {
+      setError("");
+      setLoading(true);
+      await login(email, pass);
+      navigate("/protect");
+    } catch (error) {
+      setError("Wrong Credential");
+    }
+    setLoading(false);
+  };
+  const handleGoogleSignin = async () => {
+    try {
+      await googleSignIn();
+    } catch (error) {
+      setError(error.message);
+    }
   };
   return (
     <div className="login-wrapper">
@@ -46,6 +52,7 @@ const Login = () => {
             <Card.Title as="h1">Login</Card.Title>
             <br />
             <Card.Text>
+              {error && <Alert variant="danger">{error}</Alert>}
               <form action="" onSubmit={(e) => handleLogin(e)}>
                 <label htmlFor="">Mobile Number</label>
                 <InputGroup className="my-3">
@@ -81,6 +88,10 @@ const Login = () => {
                   Here.
                 </Link>
               </form>
+              <br />
+              <Button variant="outline-light" onClick={handleGoogleSignin}>
+                SignIn With Google
+              </Button>
             </Card.Text>
           </Card.Body>
         </Card>
