@@ -1,93 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Login.scss";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { Container, Form, InputGroup } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import LoginBg from "./LoginBg";
+import axios from "axios";
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [pass, setPass] = useState("");
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    const body = {
+      email,
+      password: pass,
+    };
+    console.log(body);
+    const response = await axios.post(
+      "https://34.207.41.229:4100/playpenny/login",
+      body,
+      {
+        headers: {
+          Accept: "application/json, text/plain, */*",
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    console.log(response);
+  };
   return (
     <div className="login-wrapper">
       <div className="login-bg">
-        <div className="pattern0 fireworks fire0">
-          <div className="ring_1" />
-          <div className="ring_2" />
-        </div>
-        <div className="pattern1 fireworks fire1">
-          <div className="ring_1" />
-          <div className="ring_2" />
-        </div>
-        <div className="pattern2 fireworks fire2">
-          <div className="ring_1" />
-          <div className="ring_2" />
-        </div>
-        <div className="pattern3 fireworks fire3">
-          <div className="ring_1" />
-          <div className="ring_2" />
-        </div>
-        <div className="pattern4 fireworks fire4">
-          <div className="ring_1" />
-          <div className="ring_2" />
-        </div>
-        <div className="pattern5 fireworks fire5">
-          <div className="ring_1" />
-          <div className="ring_2" />
-        </div>
-        <div className="pattern6 fireworks fire6">
-          <div className="ring_1" />
-          <div className="ring_2" />
-        </div>
-        <div className="pattern7 fireworks fire7">
-          <div className="ring_1" />
-          <div className="ring_2" />
-        </div>
-        <div className="pattern8 fireworks fire8">
-          <div className="ring_1" />
-          <div className="ring_2" />
-        </div>
-        <div className="pattern9 fireworks fire9">
-          <div className="ring_1" />
-          <div className="ring_2" />
-        </div>
-        <div className="pattern10 fireworks fire10">
-          <div className="ring_1" />
-          <div className="ring_2" />
-        </div>
-        <div className="pattern11 fireworks fire11">
-          <div className="ring_1" />
-          <div className="ring_2" />
-        </div>
-        <div className="pattern12 fireworks fire12">
-          <div className="ring_1" />
-          <div className="ring_2" />
-        </div>
-        <div className="pattern13 fireworks fire13">
-          <div className="ring_1" />
-          <div className="ring_2" />
-        </div>
-        <div className="pattern14 fireworks fire14">
-          <div className="ring_1" />
-          <div className="ring_2" />
-        </div>
-        <div className="pattern15 fireworks fire15">
-          <div className="ring_1" />
-          <div className="ring_2" />
-        </div>
-        <div className="pattern16 fireworks fire16">
-          <div className="ring_1" />
-          <div className="ring_2" />
-        </div>
-        <div className="pattern17 fireworks fire17">
-          <div className="ring_1" />
-          <div className="ring_2" />
-        </div>
-        <div className="pattern18 fireworks fire18">
-          <div className="ring_1" />
-          <div className="ring_2" />
-        </div>
-        <div className="pattern19 fireworks fire19">
-          <div className="ring_1" />
-          <div className="ring_2" />
-        </div>
+        <LoginBg />
       </div>
       <Container className="d-flex">
         <Card className="m-auto login-card">
@@ -102,14 +46,17 @@ const Login = () => {
             <Card.Title as="h1">Login</Card.Title>
             <br />
             <Card.Text>
-              <form action="">
+              <form action="" onSubmit={(e) => handleLogin(e)}>
                 <label htmlFor="">Mobile Number</label>
-
                 <InputGroup className="my-3">
                   <Form.Control
                     placeholder="Enter your Mobile No."
                     aria-label="Username"
+                    className="text-light"
                     aria-describedby="basic-addon1"
+                    required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </InputGroup>
                 <label htmlFor="">Password</label>
@@ -117,10 +64,22 @@ const Login = () => {
                   <Form.Control
                     placeholder="Enter Password"
                     aria-label="Username"
+                    className="text-light"
                     aria-describedby="basic-addon1"
+                    required
+                    value={pass}
+                    onChange={(e) => setPass(e.target.value)}
                   />
                 </InputGroup>
-                <Button variant="primary">Login</Button>
+                <Button type="submit" variant="primary">
+                  Login
+                </Button>
+                <br />
+                <br />
+                New user signup{" "}
+                <Link to="/signup" style={{ fontWeight: "bold" }}>
+                  Here.
+                </Link>
               </form>
             </Card.Text>
           </Card.Body>

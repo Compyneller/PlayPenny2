@@ -22,6 +22,7 @@ import AddCash from "./components/AddCash/AddCash";
 import WithdrawCash from "./components/WithdrawCash/WithdrawCash";
 import PersonalDetails from "./components/PersonalDetails/PersonalDetails";
 import Transactions from "./components/Transactions/Transactions";
+import SignUp from "./pages/SignUp/SignUp";
 function App() {
   return (
     <div className="App">
@@ -31,6 +32,7 @@ function App() {
           <Route path="/promotion" element={<Promotion />} />
           <Route path="/leaderboard" element={<Leaderboard />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/how-to-play" element={<HowToPlay />} />
           <Route path="/privacy" element={<Privacy />} />
