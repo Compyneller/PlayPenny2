@@ -6,7 +6,7 @@ import { Alert, Container, Form, InputGroup } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import LoginBg from "./LoginBg";
 import axios from "axios";
-import { signInWithGoogle } from "../../firebase";
+
 import { useUserAuth } from "../../context/AuthContext";
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -27,9 +27,11 @@ const Login = () => {
     }
     setLoading(false);
   };
-  const handleGoogleSignin = async () => {
+  const handleGoogleSignin = async (e) => {
+    e.preventDefault();
     try {
       await googleSignIn();
+      navigate("/protect");
     } catch (error) {
       setError(error.message);
     }

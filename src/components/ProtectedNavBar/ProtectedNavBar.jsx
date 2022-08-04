@@ -49,7 +49,7 @@ const ProtectedNavBar = ({ bg }) => {
                   <Nav.Link href="/leaderboard">PlayPenny Rewards</Nav.Link>
                   <Nav.Link href="/leaderboard">Promotions Rewards</Nav.Link>
                   <Nav.Link href="/login">
-                    <Button variant="outline-light" onClick={handleLogout}>
+                    <Button variant="danger" onClick={handleLogout}>
                       Logout
                     </Button>
                   </Nav.Link>

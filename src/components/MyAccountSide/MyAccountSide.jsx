@@ -5,37 +5,37 @@ import style from "./side.module.scss";
 const MyAccountSide = () => {
   return (
     <Row className={`g-2 ${style.wrapper}`}>
-      <div className="col-3 col-lg-12">
+      <div className="col-6 col-lg-12">
         <Link to="account-overview">
-          <Card>
+          <Card style={{ height: "100%" }}>
             <Card.Body>Account Overview</Card.Body>
           </Card>
         </Link>
       </div>
-      <div className="col-3 col-lg-12">
+      <div className="col-6 col-lg-12">
         <Link to="add-cash">
-          <Card>
+          <Card style={{ height: "100%" }}>
             <Card.Body>Add Cash</Card.Body>
           </Card>
         </Link>
       </div>
-      <div className="col-3 col-lg-12">
+      <div className="col-6 col-lg-12">
         <Link to="withdraw-cash">
-          <Card>
+          <Card style={{ height: "100%" }}>
             <Card.Body>Withdraw Cash</Card.Body>
           </Card>
         </Link>
       </div>
-      <div className="col-3 col-lg-12">
+      <div className="col-6 col-lg-12">
         <Link to="personal-detail">
-          <Card>
+          <Card style={{ height: "100%" }}>
             <Card.Body>Profile</Card.Body>
           </Card>
         </Link>
       </div>
-      <div className="col-3 col-lg-12">
+      <div className="col-6 col-lg-12">
         <Link to="transactions">
-          <Card>
+          <Card style={{ height: "100%" }}>
             <Card.Body>View Transactions</Card.Body>
           </Card>
         </Link>

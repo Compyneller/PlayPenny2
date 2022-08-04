@@ -35,7 +35,7 @@ const SignUp = () => {
       navigate("/login");
     } catch (error) {
       setError(
-        "Failed to create an account Password must be above 6 character"
+        "Failed to create an account, Password must be above 6 character"
       );
     }
     setLoading(false);
