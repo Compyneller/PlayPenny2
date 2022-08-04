@@ -30,7 +30,7 @@ const SignUp = () => {
     };
     console.log(body);
     const response = await axios.post(
-      "http://34.207.41.229:4100/playpenny/signup",
+      "https://34.207.41.229:4100/playpenny/signup",
       body,
       {
         headers: {
